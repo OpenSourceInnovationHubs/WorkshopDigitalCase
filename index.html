@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital FIWARE Workshop Case</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" >
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div id="playground">
+        <div id="delete">
+            <span class="material-symbols-outlined">
+                delete
+            </span>
+        </div>
+    </div>
+    <div id="toolbar">
+        <div id="elements">
+            <div class="button">
+                <div class="element add-house" data-element="house-template">
+                    House
+                </div>
+                <div class="download" data-json="house">
+                    <span class="material-symbols-outlined">
+                        download
+                    </span>
+                </div>
+            </div>
+            <div class="button">
+                <div class="element add-roof" data-element="roof-template">
+                    PV Roof
+                </div>
+                <div class="download" data-json="roof">
+                    <span class="material-symbols-outlined">
+                        download
+                    </span>
+                </div>
+            </div>
+            <div class="button">
+                <div class="element add-battery" data-element="battery-template">
+                    Battery
+                </div>
+                <div class="download" data-json="battery">
+                    <span class="material-symbols-outlined">
+                        download
+                    </span>
+                </div>
+            </div>
+            <div class="button">
+                <div class="element add-grid" data-element="pole-template">
+                    Grid
+                </div>
+                <div class="download" data-json="battery">
+                    <span class="material-symbols-outlined">
+                        download
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="upload">
+            <span class="material-symbols-outlined">
+                arrow_upload_ready
+            </span>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <div id="templates">
+        <template id="house-template">
+            <div class="house">
+                <div class="roof-drop">
+                    <p>Roof</p>
+                </div>
+                <div class="center">
+                    <div class="share-drop">
+                        <p>⚡</p>
+                    </div>
+                    <div class="body">
+                        <p>House</p>
+                    </div>
+                    <div class="battery-drop">
+                        <p>🔋</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="roof-template">
+            <div class="roof">
+                <p>PV Roof</p>
+            </div>
+        </template>
+
+        <template id="battery-template">
+            <div class="battery" data-percent="100">
+                <p>100%</p>
+            </div>
+        </template>
+
+        <template id="pole-template">
+            <div class="pole">
+                <p>Grid</p>
+            </div>
+        </template>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="assets/js/refactor.js"></script>
+</body>
+</html>
