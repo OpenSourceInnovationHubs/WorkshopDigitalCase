@@ -6,64 +6,41 @@
     <title>Digital FIWARE Workshop Case</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/theme/monokai.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <div id="playground">
-        <div id="delete">
-            <span class="material-symbols-outlined">
-                delete
-            </span>
-        </div>
-    </div>
-    <div id="toolbar">
-        <div id="elements">
-            <div class="button">
-                <div class="element add-house" data-element="house-template">
-                    House
-                </div>
-                <div class="download" data-json="house">
+    <div id="app">
+        <div id="left-panel">
+            <div id="playground">
+                <div id="delete">
                     <span class="material-symbols-outlined">
-                        download
+                        delete
                     </span>
                 </div>
             </div>
-            <div class="button">
-                <div class="element add-roof" data-element="roof-template">
-                    PV Roof
-                </div>
-                <div class="download" data-json="roof">
-                    <span class="material-symbols-outlined">
-                        download
-                    </span>
-                </div>
-            </div>
-            <div class="button">
-                <div class="element add-battery" data-element="battery-template">
-                    Battery
-                </div>
-                <div class="download" data-json="battery">
-                    <span class="material-symbols-outlined">
-                        download
-                    </span>
-                </div>
-            </div>
-            <div class="button">
-                <div class="element add-grid" data-element="pole-template">
-                    Grid
-                </div>
-                <div class="download" data-json="battery">
-                    <span class="material-symbols-outlined">
-                        download
-                    </span>
+            <div id="toolbar">
+                <div id="elements">
+                    <div class="element add-house" data-element="house-template">
+                        House
+                    </div>
+                    <div class="element add-roof" data-element="roof-template">
+                        PV Roof
+                    </div>
+                    <div class="element add-battery" data-element="battery-template">
+                        Battery
+                    </div>
+                    <div class="element add-grid" data-element="grid-template">
+                        Grid
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="upload">
-            <span class="material-symbols-outlined">
-                arrow_upload_ready
-            </span>
+        <div id="editor-panel">
+            <div id="editor-header">Select an element to edit</div>
+            <textarea id="json-editor"></textarea>
         </div>
     </div>
 
@@ -100,7 +77,7 @@
             </div>
         </template>
 
-        <template id="pole-template">
+        <template id="grid-template">
             <div class="pole">
                 <p>Grid</p>
             </div>
@@ -109,6 +86,8 @@
     
     
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="assets/js/refactor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/mode/javascript/javascript.min.js"></script>
+    <script src="assets/js/case.js"></script>
 </body>
 </html>
